@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metadatos básicos y configuración de la página -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NETFLIX</title>
+    <!-- Enlace al archivo de estilos CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Logo de Netflix -->
+    <img src="img/logon.png" class="logo" alt="netflix" />
+
+    <!-- Contenedor principal del formulario de inicio de sesión -->
+    <div class="form-wrapper">
+      <h2>Inicia sesión</h2>
+      <form action="#">
+        <!-- Campo de entrada para email o número de celular -->
+        <div class="form-control">
+          <input type="text" required />
+          <label for="email">Email o número de celular</label>
+        </div>
+        <!-- Campo de entrada para contraseña -->
+        <div class="form-control">
+          <input type="password" required />
+          <label for="password">Contraseña</label>
+        </div>
+        <!-- Botón de inicio de sesión -->
+        <button type="submit">Iniciar sesión</button>
+
+        <!-- Sección de ayuda y opciones adicionales -->
+        <div class="form-hep">
+          <!-- Opción de inicio de sesión con código -->
+          <div class="login-container">
+            <!-- Separador de línea -->
+            <div style="text-align: center; padding: 5px">
+              <!-- Separador de línea O -->
+              <label style="color: white">O</label>
+            </div>
+            <button class="login-btn">
+              Usar un codigo de inicio de sesión
+            </button>
+          </div>
+          <!-- Enlace para recuperar contraseña -->
+          <p>
+            <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+          </p>
+          <!-- Opción para recordar usuario -->
+          <div class="remember">
+            <input type="checkbox" id="remember-me" />
+            <label for="remember-me">Recuérdame</label>
+          </div>
+        </div>
+      </form>
+      <!-- Enlace para nuevos usuarios -->
+      <p>Primera vez en netflix?<a href="#">Suscríbete ya.</a></p>
+      <!-- Aviso de seguridad reCAPTCHA -->
+      <small>
+        Esta página está protegida por Google reCAPTCHA para verificar que no
+        eres un bot. <a href="#">Más info.</a>
+      </small>
+    </div>
+    <!-- Enlace al archivo JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,206 @@
+/* Reset global de estilos para todos los elementos */
+* {
+  margin: 0; /* Elimina todos los márgenes predeterminados */
+  padding: 0; /* Elimina todo el padding predeterminado */
+  box-sizing: border-box; /* Incluye padding y border en el ancho/alto total */
+  font-family: "Roboto", sans-serif; /* Define la fuente principal y fallback */
+}
+
+body {
+  background-color: #000; /* Establece el color de fondo negro para toda la página */
+}
+
+/* Crea un overlay con la imagen de fondo */
+body::before {
+  content: ""; /* Necesario para que el pseudo-elemento se muestre */
+  position: absolute; /* Posiciona el elemento de forma absoluta */
+  top: 0; /* Alinea al tope de la página */
+  left: 0; /* Alinea al borde izquierdo */
+  opacity: 0.7; /* Hace la imagen semi-transparente */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: 100%; /* Ocupa todo el alto disponible */
+  background: url(img/fondo3.jpeg) no-repeat center center fixed; /* Establece la imagen de fondo con propiedades */
+  background-size: cover; /* Ajusta la imagen para cubrir todo el espacio */
+}
+
+/* Estilos para el logo de Netflix */
+.logo {
+  position: absolute; /* Posiciona el logo de forma absoluta */
+  top: 10px; /* Distancia desde el tope */
+  left: 80px; /* Distancia desde la izquierda */
+  width: 120px; /* Ancho del logo */
+}
+
+/* Estilos para el contenedor del formulario */
+.form-wrapper {
+  position: absolute; /* Posiciona el formulario de forma absoluta */
+  left: 50%; /* Centra horizontalmente */
+  top: 50%; /* Centra verticalmente */
+  transform: translate(-50%, -50%); /* Ajusta el centrado perfecto */
+  border-radius: 4px; /* Redondea las esquinas del formulario */
+  padding: 70px; /* Espacio interno del formulario */
+  width: 450px; /* Ancho fijo del formulario */
+  background-color: rgba(0, 0, 0, 0.75); /* Fondo negro semi-transparente */
+}
+
+/* Estilos para el título del formulario */
+.form-wrapper h2 {
+  color: #fff; /* Color del texto blanco */
+  font-size: 2rem; /* Tamaño de la fuente */
+  margin-bottom: 25px; /* Espacio entre el título y el formulario */
+}
+
+/* Estilos para el contenedor de cada campo del formulario */
+.form-control {
+  height: 50px; /* Altura del contenedor del input */
+  position: relative; /* Posiciona el contenedor de forma relativa */
+  margin-bottom: 16px; /* Espacio entre campos */
+}
+
+/* Estilos para los inputs del formulario */
+.form-control input {
+  height: 100%; /* Altura completa del contenedor */
+  width: 100%; /* Ancho completo del contenedor */
+  background-color: #333; /* Color de fondo gris oscuro */
+  border: none; /* Elimina el borde */
+  border-radius: 4px; /* Redondea las esquinas */
+  color: #fff; /* Color del texto blanco */
+  font-size: 1rem; /* Tamaño de la fuente */
+  padding: 20px; /* Espacio interno del input */
+  outline: none; /* Elimina el outline al enfocar */
+}
+
+/* Estilos para los inputs cuando están enfocados */
+.form-control input:focus {
+  background: #444; /* Cambia el color de fondo al enfocar */
+}
+
+/* Estilos para las etiquetas de los inputs */
+.form-control label {
+  position: absolute; /* Posiciona la etiqueta de forma absoluta */
+  top: 50%; /* Centra verticalmente */
+  left: 20px; /* Distancia desde la izquierda */
+  transform: translateY(-50%); /* Ajusta el centrado vertical */
+  font-size: 1rem; /* Tamaño de la fuente */
+  pointer-events: none; /* Evita que la etiqueta interfiera con el input */
+  transition: all 0.1s ease; /* Transición suave para animaciones */
+  color: #8c8c8c; /* Color del texto gris */
+}
+
+/* Estilos para las etiquetas cuando el input está enfocado o tiene contenido */
+.form-control input:focus ~ label,
+.form-control input:valid ~ label {
+  font-size: 0.75rem; /* Reduce el tamaño de la fuente */
+  transform: translateY(-130%); /* Mueve la etiqueta hacia arriba */
+}
+
+/* Estilos para el botón de inicio de sesión */
+button[type="submit"] {
+  width: 100%; /* Ancho completo */
+  padding: 16px; /* Espacio interno */
+  background: #e50914; /* Color rojo de Netflix */
+  color: #fff; /* Color del texto blanco */
+  border: none; /* Elimina el borde */
+  border-radius: 4px; /* Redondea las esquinas */
+  font-size: 1rem; /* Tamaño de la fuente */
+  font-weight: bold; /* Texto en negrita */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  margin-top: 24px; /* Espacio superior */
+  transition: background 0.3s ease; /* Transición suave del color de fondo */
+}
+
+button[type="submit"]:hover {
+  background: #f40612; /* Color rojo más claro al pasar el mouse */
+}
+
+/* Estilos para los enlaces de ayuda */
+.form-hep {
+  margin-top: 16px; /* Espacio superior */
+  color: #b3b3b3; /* Color del texto gris claro */
+}
+
+.form-hep a {
+  color: #b3b3b3; /* Color del enlace gris claro */
+  text-decoration: none; /* Elimina el subrayado */
+}
+
+.form-hep a:hover {
+  text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+}
+
+/* Estilos para el contenedor del botón de código de inicio de sesión */
+.login-container {
+  display: flex; /* Usa flexbox para alinear elementos */
+  align-items: baseline; /* Alinea los elementos a la línea base del texto */
+  justify-content: center; /* Centra horizontalmente */
+  margin: 16px 0; /* Espacio vertical */
+  gap: 8px; /* Espacio entre elementos */
+}
+
+.login-container label {
+  color: #b3b3b3; /* Color del texto gris claro */
+  font-size: 1rem; /* Tamaño de fuente igual al botón */
+  line-height: 1.2; /* Altura de línea para mejor alineación */
+  padding: 0; /* Sin padding extra */
+}
+
+/* Estilos para el botón de código de inicio de sesión */
+.login-btn {
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  color: #b3b3b3; /* Color del texto gris claro */
+  font-size: 1rem; /* Tamaño de la fuente igual al label */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  padding: 0; /* Sin padding extra */
+  text-decoration: none; /* Sin subrayado */
+  line-height: 1.2; /* Altura de línea igual al label */
+  display: inline; /* Asegura que se comporte como texto */
+  vertical-align: baseline; /* Alinea a la línea base */
+}
+
+.login-btn:hover {
+  text-decoration: underline; /* Subraya el texto al pasar el mouse */
+}
+
+/* Estilos para el checkbox "Recuérdame" */
+.remember {
+  display: flex; /* Usa flexbox para alinear elementos */
+  align-items: center; /* Centra verticalmente */
+  margin-top: 12px; /* Espacio superior */
+}
+
+.remember input[type="checkbox"] {
+  margin-right: 8px; /* Espacio entre el checkbox y el texto */
+}
+
+/* Estilos para el mensaje de nuevo usuario */
+.form-wrapper > p {
+  color: #737373; /* Color del texto gris */
+  margin-top: 16px; /* Espacio superior */
+}
+
+.form-wrapper > p a {
+  color: #fff; /* Color del enlace blanco */
+  text-decoration: none; /* Elimina el subrayado */
+}
+
+.form-wrapper > p a:hover {
+  text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+}
+
+/* Estilos para el mensaje de reCAPTCHA */
+.form-wrapper > small {
+  color: #8c8c8c; /* Color del texto gris */
+  display: block; /* Hace que ocupe su propia línea */
+  margin-top: 16px; /* Espacio superior */
+  font-size: 0.8rem; /* Tamaño de fuente más pequeño */
+}
+
+.form-wrapper > small a {
+  color: #0071eb; /* Color del enlace azul */
+  text-decoration: none; /* Elimina el subrayado */
+}
+
+.form-wrapper > small a:hover {
+  text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+}
